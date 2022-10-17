@@ -1,0 +1,40 @@
+<p>sensordata-table works!</p>
+
+<h1>Hello {{dataSource[0]['Date and Time']}}</h1>
+<h1>Hello {{dataSource[0].Temperature}}</h1>
+<h1>Hello {{dataSource[0].Humidity}}</h1>
+<h1>Hello {{dataSource[0].Voltage}}</h1>
+<h1>Hello {{dataSource[0]['Input On'].Off}}</h1>
+
+<!--
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="Date and Time">
+    <th mat-header-cell *matHeaderCellDef> Date and Time </th>
+    <td mat-cell *matCellDef="let element"> {{element['Date and Time']}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Temperature">
+    <th mat-header-cell *matHeaderCellDef> Temperature </th>
+    <td mat-cell *matCellDef="let element"> {{element.Temperature}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Humidity">
+    <th mat-header-cell *matHeaderCellDef> Humidity </th>
+    <td mat-cell *matCellDef="let element"> {{element.Humidity}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Voltage">
+    <th mat-header-cell *matHeaderCellDef> Voltage </th>
+    <td mat-cell *matCellDef="let element"> {{element.Voltage}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Input On">
+    <th mat-header-cell *matHeaderCellDef> Input On </th>
+    <td mat-cell *matCellDef="let element"> {{element['Input On'].Off}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+-->
