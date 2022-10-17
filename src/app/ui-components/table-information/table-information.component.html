@@ -1,0 +1,22 @@
+<mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+        Valid data point ranges legend
+        </mat-panel-title>
+        <mat-panel-description>
+            Click to {{panelOpenState ? 'close' : 'open'}}
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-panel-description>Data content below the valid data point range appear in light blue</mat-panel-description><br>
+        <mat-panel-description>Data content above the valid data point range appear in light red</mat-panel-description><br>
+        <mat-panel-description>Data content for Input State zero (0) appear in light gray</mat-panel-description>
+        <mat-list role="list">
+            <mat-list-item role="listitem">Temperature: 0 F to 120 F</mat-list-item>
+            <mat-list-item role="listitem">Humidity: 0% to 100%</mat-list-item>
+            <mat-list-item role="listitem">Voltage: Non-Null or Non-Blank</mat-list-item>
+            <mat-list-item role="listitem">Input State: 0 or 1</mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-accordion>
