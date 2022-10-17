@@ -14,17 +14,24 @@
 
   <ng-container matColumnDef="Humidity">
     <th mat-header-cell *matHeaderCellDef> Humidity </th>
-    <td mat-cell *matCellDef="let element"> {{element.Humidity}} </td>
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+      'is-above': element.Humidity.split(' ', 1) > 100,
+      'is-below': element.Humidity.split(' ', 1) < 0
+    }"> {{element.Humidity}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Voltage">
     <th mat-header-cell *matHeaderCellDef> Voltage </th>
-    <td mat-cell *matCellDef="let element"> {{element.Voltage}} </td>
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+      'is-zero': element.Voltage.split(' ', 1) == 0
+    }"> {{element.Voltage}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Input On">
     <th mat-header-cell *matHeaderCellDef> Input On </th>
-    <td mat-cell *matCellDef="let element"> {{element['Input On'].Off}} </td>
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+      'is-zero': element['Input On'].Off == 0
+    }"> {{element['Input On'].Off}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

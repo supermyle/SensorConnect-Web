@@ -3,7 +3,7 @@ table {
   }
 
 .mat-row:nth-child(even){
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
         
 .mat-row:nth-child(odd){
@@ -11,9 +11,13 @@ table {
 }
 
 td.is-above {
-    background-color: #ff726f;
+    background-color: #FF726F;
 }
 
 td.is-below {
     background-color: #ADD8E6;
+}
+
+td.is-zero {
+    background-color: #C6C6C6;
 }
