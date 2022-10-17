@@ -6,7 +6,10 @@
 
   <ng-container matColumnDef="Temperature">
     <th mat-header-cell *matHeaderCellDef> Temperature </th>
-    <td mat-cell *matCellDef="let element"> {{element.Temperature}} </td>
+    <td mat-cell *matCellDef="let element"[ngClass]="{
+      'is-above': element.Temperature.split(' ', 1) > 120,
+      'is-below': element.Temperature.split(' ', 1) < 0
+    }"> {{element.Temperature}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Humidity">

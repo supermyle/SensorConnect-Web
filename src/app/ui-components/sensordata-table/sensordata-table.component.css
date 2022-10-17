@@ -9,3 +9,11 @@ table {
 .mat-row:nth-child(odd){
     background-color: #90ee90;
 }
+
+td.is-above {
+    background-color: #ff726f;
+}
+
+td.is-below {
+    background-color: #ADD8E6;
+}
