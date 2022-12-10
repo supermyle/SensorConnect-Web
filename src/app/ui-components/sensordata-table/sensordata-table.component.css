@@ -1,13 +1,25 @@
 table {
     width: 100%;
-  }
+}
 
-.mat-row:nth-child(even){
+tr:nth-child(even) {
+    background-color: #FFFFFF;
+}
+
+tr:nth-child(even):hover {
     background-color: #FFFFFF;
 }
         
-.mat-row:nth-child(odd){
+tr:nth-child(odd) {
     background-color: #90ee90;
+}
+
+tr:nth-child(odd):hover {
+    background-color: #90ee90;
+}
+
+#header-row {
+    background: none;
 }
 
 td.is-above {
