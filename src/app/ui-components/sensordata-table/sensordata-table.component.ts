@@ -15,7 +15,7 @@ export class SensordataTableComponent {
   displayedColumns: string[] = ['Date and Time', 'Temperature', 'Humidity', 'Voltage', 'Input On'];
   SENSOR_DATA: SensorRecord[] = sensorData;
   dataSource!: MatTableDataSource<SensorRecord>;
-  pageSizes = [5,10,15];
+  pageSizes = [10, 25, 50, 100];
 
   constructor() { }
 
