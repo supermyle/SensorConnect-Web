@@ -23,4 +23,8 @@ export class SensordataTableComponent {
     this.dataSource = new MatTableDataSource(this.SENSOR_DATA);
     this.dataSource.paginator = this.paginator;
   }
+
+  toNumber(value: any) {
+    return Number(value);
+  }
 }

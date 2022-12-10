@@ -6,31 +6,31 @@
 
   <ng-container matColumnDef="Temperature">
     <th mat-header-cell *matHeaderCellDef> Temperature </th>
-    <td mat-cell *matCellDef="let element"[ngClass]="{
-      'is-above': element.Temperature.split(' ', 1) > 120,
-      'is-below': element.Temperature.split(' ', 1) < 0
+    <td mat-cell *matCellDef="let element" [ngClass]="{
+      'is-above': toNumber(element.Temperature.split(' ', 1)) > 120,
+      'is-below': toNumber(element.Temperature.split(' ', 1)) < 0
     }"> {{element.Temperature}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Humidity">
     <th mat-header-cell *matHeaderCellDef> Humidity </th>
     <td mat-cell *matCellDef="let element" [ngClass]="{
-      'is-above': element.Humidity.split(' ', 1) > 100,
-      'is-below': element.Humidity.split(' ', 1) < 0
+      'is-above': toNumber(element.Humidity.split(' ', 1)) > 100,
+      'is-below': toNumber(element.Humidity.split(' ', 1)) < 0
     }"> {{element.Humidity}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Voltage">
     <th mat-header-cell *matHeaderCellDef> Voltage </th>
     <td mat-cell *matCellDef="let element" [ngClass]="{
-      'is-zero': element.Voltage.split(' ', 1) == 0
+      'is-zero': toNumber(element.Voltage.split(' ', 1)) == 0
     }"> {{element.Voltage}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Input On">
     <th mat-header-cell *matHeaderCellDef> Input On </th>
     <td mat-cell *matCellDef="let element" [ngClass]="{
-      'is-zero': element['Input On'].Off == 0
+      'is-zero': toNumber(element['Input On'].Off) == 0
     }"> {{element['Input On'].Off}} </td>
   </ng-container>
 
